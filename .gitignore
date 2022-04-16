@@ -1,2 +1,5 @@
 # Jekyll build files after local testing
 /_site/
+
+# VSCode workspace
+/*.code-workspace
