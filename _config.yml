@@ -1,6 +1,10 @@
 collections:
   authors:
     output: true
+  courses:
+    output: true
+  lectures:
+    output: true
 
 defaults:
   - scope:
@@ -10,9 +14,24 @@ defaults:
       layout: "author"
   - scope:
       path: ""
-      type: "posts"
+      type: "courses"
     values:
-      layout: "post"
+      layout: "course"
+  - scope:
+      path: ""
+      type: "lectures"
+    values:
+      layout: "lecture"
+  - scope:
+      path: "_lectures/efficient-algorithms"
+      type: "lectures"
+    values:
+      lecture: "efficient-algorithms"
+  - scope:
+      path: "_lectures/complexity-theory"
+      type: "lectures"
+    values:
+      lecture: "complexity-theory"
   - scope:
       path: ""
     values:

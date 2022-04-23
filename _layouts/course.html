@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1>{{ page.name }}</h1>
+<h2>{{ page.position }}</h2>
+
+{{ content }}
+
+<h2>Lectures</h2>
+<ul>
+  {% assign filtered_lectures = site.lectures | where: 'lecture', page.lecture
+  %} {% for lecture in filtered_lectures %}
+  <li><a href="{{ lecture.url }}">{{ lecture.title }}</a></li>
+  {% endfor %}
+</ul>
